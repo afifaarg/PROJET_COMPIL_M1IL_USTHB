@@ -1,0 +1,52 @@
+< ! docprogram ID_program>
+< SUB VARIABLE >
+  < a as int >
+  < b as int >
+  < c as int >
+  < d as FLT >
+  < g as BOL>
+</ SUB VARIABLE >
+
+<SUB CONSTANTE>
+  < l as int/>
+</SUB CONSTANTE>
+
+<body>
+
+<AFF:a,1/>
+<AFF:b,3/>
+<AFF:a,b/>
+<AFF:c,4*a/>
+
+<FOR i=a UNTIL 20> 
+<AFF: a, b+ 7 />
+</FOR>
+
+<IF: NOT(SUP(c,4)) >
+    <THEN>
+    <AFF: a, b+ 5/>
+    <AFF : f, FALSE/>
+    </THEN>
+    <ELSE>
+    <AFF: b,a+ 5/>
+    </ELSE>
+  </IF>
+
+ 
+ <IF: NOT(SUP(4,c)) >
+    <THEN>
+    <AFF: b, 1 />
+    </THEN>
+    
+  </IF>
+
+  <DO>
+     <AFF: a, b+ 5/>
+    <WHILE: SUP(a,c)/>
+  </DO>
+
+<INPUT : a "tappez une valeur :"$/>
+<OUTPUT: "a est $:"+a+ "b est: $"+b />
+
+</body>
+</docprogram> 
